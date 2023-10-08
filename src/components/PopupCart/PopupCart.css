@@ -1,0 +1,70 @@
+.popup-modal {
+    /* display: none; */
+    /* display: flex; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-cart {
+    min-height: 353px;
+    min-width: 432px;
+    background-color: white;
+}
+
+.popup-cart-body {
+    padding: 24px;
+}
+
+.popup-cart-title {
+    margin-bottom: 24px;
+    font-size: 25px;
+    font-weight: 700;
+    /* color: var(--grey-color); */
+}
+
+.popup-cart-footer {
+    display: flex;
+    padding: 10px 24px;
+    flex-direction: row;
+    justify-content: end;
+    background-color: #E9EBEE;
+}
+
+.popup-cart-btn {
+    padding: 7px 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: inherit;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.popup-cart-btn:hover {
+    background-color: rgb(186, 183, 183);
+}
+
+.popup-cart-btn-primary {
+    background-color: var(--black-color);
+    color: white;
+}
+
+.popup-cart-btn-primary:hover {
+    background-color: var(--black-color);
+}
+
+.popup-cart-btn-primary:disabled {
+    background-color: var(--grey-color);
+    cursor: no-drop;
+}
+
+.popup-cart-btn-primary:active {
+    background-color: #01B075;
+}

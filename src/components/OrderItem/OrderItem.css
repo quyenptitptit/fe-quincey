@@ -1,0 +1,34 @@
+.order-item {
+    background-color: white;
+    padding: 0 30px 10px 30px;
+    margin-bottom: 20px;
+}
+
+.order-item-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 24px; */
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+} 
+
+.order-item-header button {
+    padding: 5px 15px;
+    background-color: white;
+    border: 1px solid #e13105;
+    cursor: pointer;
+    color: #e13105;
+}
+
+.order-item-header p {
+    padding: 5px 15px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    color: var(--grey-color);
+}
+
+.order-item-header h5 {
+    font-weight: 700;
+}

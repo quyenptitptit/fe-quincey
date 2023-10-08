@@ -1,0 +1,32 @@
+.bank {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    padding: 20px 30px;
+    /* align-items: center; */
+}
+
+.bank-header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+.bank-btn {
+    padding: 0 10px;
+    height: 50px;
+    background-color: var(--black-color);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+
+.bank-btn:hover {
+    background-color: var(--black-hover);
+}
+

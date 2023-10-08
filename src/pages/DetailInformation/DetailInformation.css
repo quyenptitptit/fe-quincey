@@ -1,0 +1,211 @@
+.infor {
+    display: flex;
+    flex-direction: column;
+    margin: 0 145px;
+}
+
+.c-infor {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.infor-general {
+    display: flex;
+    height: max-content;
+    /* width: max-content; */
+}
+
+.infor-general-img {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.i-general-img-big {
+    height: 500px;
+    width: 500px;
+    margin: 0 50px 0 50px;
+}
+
+.i-share {
+    font-size: 180%;
+}
+
+.i-share i {
+    margin-right: 5px;
+}
+
+.infor-general-txt {
+    margin: 0 30px;
+    width: 50%;
+}
+
+.i-general-des {
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.i-general-des, .i-label, .i-txt, .i-item {
+    letter-spacing: 0px !important;
+    text-transform: capitalize;
+}
+
+.i-general-review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.infor-genetal-price {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgb(205, 204, 204);
+}
+
+.i-general-price {
+    font-size: 200%;
+    color: var(--price-color);
+    
+}
+
+.i-general-price-sale {
+    font-size: 160%;
+    color: #9E9FA5;
+    margin-left: 10px;
+}
+
+.i-general-infor{
+    padding: 20px 0;
+}
+
+.i-general-infor-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.i-label {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    color: var(--grey-color);
+    font-weight: bold;
+}
+
+.i-label, .i-txt {
+    font-size: 120%;
+    /* font-weight: 300; */
+}
+
+.i-item {
+    font-size: 110%;
+    padding: 8px 16px;
+    border: 1px solid rgb(205, 204, 204);
+    margin-right: 10px;
+    /* border-radius: 6px; */
+    cursor: pointer;
+    background-color: white;
+}
+
+.i-item:hover {
+    border: 1px solid var(--black-color);
+}
+
+.i-item:focus {
+    border: 1px solid var(--black-color);
+}
+
+.i-item-focus {
+    border: 1px solid var(--black-color);
+}
+
+.i-input-quantity {
+    border: 1px solid rgb(205, 204, 204);
+    border-radius: 4px;
+}
+
+.i-input-select {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border: none;
+    /* border: 1px solid rgb(205, 204, 204); */
+    cursor: pointer;
+}
+
+.i-input-select i {
+    font-weight: 100;
+    font-size: 120%;
+}
+
+.i-input-display {
+    height: 40px;
+    width: 60px;
+    border: none;
+    border-right: 1px solid rgb(205, 204, 204);
+    border-left: 1px solid rgb(205, 204, 204);
+    text-align: center;
+    font-size: 110%;
+    outline: none;
+}
+
+.i-general-btn {
+    display: flex;
+}
+
+.i-btn {
+    padding: 10px 40px;
+    font-size: 120%;
+    background-color: var(--black-color);
+    color: white;
+    margin-right: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.i-btn:disabled {
+    background-color: var(--grey-color);
+    cursor: no-drop;
+}
+
+.infor-detail {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+}
+
+.i-title {
+    font-size: 200%;
+    padding: 20px;
+    text-transform:capitalize;
+    background-color: var(--main-color);
+    color: var(--grey-color);
+    font-weight: 500;
+}
+
+.infor-detail-txt, .infor-des-txt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+}
+
+.infor-des-txt {
+    color: var(--grey-color);
+}
+
+.infor-des-txt h3 {
+    margin-bottom: 5px;
+}
+
+.infor-more {
+    margin: 0;
+    padding: 20px 110px;
+    background-color: white;
+}

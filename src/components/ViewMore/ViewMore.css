@@ -1,0 +1,43 @@
+.more {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 100px;
+}
+
+.more-title {
+    font-size: 180%;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px;
+
+}
+
+.more-item {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.more-button button {
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    height: 45px;
+    width: 300px;
+    font-size: 120%;
+    font-weight: 700;
+    background-color: white;
+    cursor: pointer;
+}
+
+.more-button button:hover {
+    background-color: black;
+    color: white;
+}

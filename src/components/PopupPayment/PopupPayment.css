@@ -1,0 +1,48 @@
+.popup-payment-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-payment {
+    /* padding: 24px; */
+    background-color: white;
+    width: 500px;
+}
+
+.popup-payment-info {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-payment-btn {
+    padding: 10px 24px;
+    background-color: rgb(228, 227, 226);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.p-payment-btn {
+    border: none;
+    background-color: inherit;
+    padding: 5px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.p-payment-btn:hover {
+    background-color: var(--grey-color);
+}
+
+.p-payment-confirm {
+    background-color: black;
+    color: white;
+}

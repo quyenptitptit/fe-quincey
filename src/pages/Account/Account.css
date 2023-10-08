@@ -1,0 +1,79 @@
+.account {
+    display: flex;
+    margin: 0 100px;
+    min-height: 465px;
+    padding: 20px;
+}
+
+.account-menu {
+    width: 25%;
+    padding: 20px 30px;
+}
+
+.account-menu-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.account-menu-header img {
+    border-radius: 50%;
+}
+
+.account-menu-header p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    /* width: 195px; */
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 500;
+    color: var(--grey-color);
+}
+
+.account-menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-account {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+    color: var(--grey-color);
+}
+
+.btn-account-focus {
+    /* color: var(--black-color); */
+    color: #ee4d2d;
+}
+
+.btn-account:hover {
+    /* color: var(--black-color); */
+    color: #ee4d2d;
+}
+
+.btn-account-item {
+    text-decoration: none;
+    padding: 5px 43px;
+    color: var(--grey-color);
+}
+
+.btn-account-item-focus {
+    /* color: var(--black-color); */
+    color: #ee4d2d;
+}
+
+.btn-account-item:hover {
+    /* color: var(--black-color); */
+    color: #ee4d2d;
+}
+
+.account-information {
+    width: 75%;
+    /* background-color: white;
+    padding: 20px 30px; */
+}

@@ -1,0 +1,130 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 144px;
+    width: 910px;
+}
+
+.cart-item-img {
+    height: 120px;
+    width: 120px;
+}
+
+.cart-item-infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 350px; */
+    padding: 0 10px;
+    height: 100%;
+    /* width: calc(100% - 160px); */
+    /* width: calc(100% - 80px); */
+    width: 740px;
+    
+}
+
+.cart-item-des {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.cart-item-color {
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 3px 7px;
+    width: max-content;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+
+.cart-item-size {
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 3px 7px;
+    width: max-content;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+}
+
+.cart-item-color:hover {
+    border: 1px solid black;
+}
+
+.cart-item-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item-price {
+    font-weight: 700;
+    font-size: 17px;
+    display: flex;
+    /* margin-right: 20px; */
+}
+
+.cart-item-option {
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-input-quantity {
+    height: max-content;
+    width: max-content;
+    border: 1px solid rgb(190, 187, 187);
+    border-radius: 20px;
+}
+
+.cart-input-select {
+    background-color: white;
+    padding: 2px 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-input-select:hover {
+    background-color: #f2f2f2;
+}
+
+.cart-input-select i {
+    font-weight: 100;
+}
+
+.cart-input-sub {
+    border-top-left-radius: 20px;
+    border-end-start-radius: 20px;
+}
+
+.cart-input-add {
+    border-top-right-radius: 20px;
+    border-end-end-radius: 20px;
+}
+
+.cart-input-display {
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 35px;
+    border-left: 1px solid rgb(190, 187, 187);
+    border-right: 1px solid rgb(190, 187, 187);
+}
+
+.cart-btn {
+    border: none;
+    background-color: inherit;
+    padding: 0 7px;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius: 30px;
+    color: #474747;
+}
+
+.cart-btn:hover {
+    color: black;
+    background-color: #f2f2f2;
+}

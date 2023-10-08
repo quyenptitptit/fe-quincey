@@ -1,0 +1,141 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    padding: 0px 20px;
+    align-items: center;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+
+.menu-btn {
+    height: 100%;
+    width: max-content;
+    padding: 0 10px;
+    /* padding: 10px; */
+    /* margin-right: 25px; */
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 18px;
+    /* box-sizing: border-box; */
+    border-radius: 0 !important;
+    cursor: pointer;
+    color: var(--grey-color);
+}
+
+.menu-btn:hover {
+    border-bottom: 2px solid black;
+}
+
+.menu-btn-focus {
+    background-color: rgba(0, 0, 0, 0.19);
+    color: black !important;
+    border: none;
+    /* border-bottom: 2px solid black; */
+}
+
+.menu-btn-focus:hover {
+    border: none;
+}
+
+.menu-dropdown:hover {
+    border-bottom: 2px solid white;
+}
+
+.search {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    border: 1px solid var(--grey-color);
+    /* border-radius: 10px; */
+}
+
+.search-input {
+    width: 400px;
+    height: 28px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    /* border-top-left-radius: 10px; */
+    /* border-end-start-radius: 10px; */
+}
+
+.search-btn {
+    height: 38px;
+    width: 38px;
+    border: none;
+    /* border-left: 1px solid var(--grey-color); */
+    background-color: var(--grey-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 0 !important;
+    /* border-top-right-radius: 10px; */
+    /* border-end-end-radius: 10px; */
+}
+
+.search-btn:hover {
+    background-color: var(--black-hover);
+}
+
+.search-btn:active {
+    background-color: var(--black-active);
+}
+
+.btn-icon {
+    border: none;
+    width: max-content;
+    height: max-content;
+    font-size: 150%;
+    padding: 3px 10px;
+    color: var(--grey-color);
+    cursor: pointer;
+    background-color: inherit;
+    /* height: 30px;
+    width: 30px; */
+}
+
+.btn-icon:hover {
+    color: var(--black-color)
+}
+
+.btn-icon:hover p {
+    background-color: var(--black-color)
+}
+
+.btn-icon-focus {
+    color: var(--black-color)
+}
+
+.length-cart {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 25px;
+    font-size: 10px;
+    background-color: var(--grey-color);
+    color: white;
+    padding: 0px 7px;
+    border-radius: 10px;
+}
+
+.length-cart-focus {
+    background-color: var(--black-color);
+}

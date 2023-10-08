@@ -1,0 +1,38 @@
+.address-item {
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.address-item p {
+    text-transform: capitalize;
+}
+
+.address-item-name {
+    font-weight: 500;
+    padding-right: 10px;
+    border-right: 1px solid var(--border-color);
+    margin-right: 10px;
+}
+
+.address-item-info {
+    width: 80%;
+}
+
+.address-item-option {
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.address-item-btn {
+    border: none;
+    /* text-decoration: underline; */
+    padding-left: 20px;
+    background-color: inherit;
+    cursor: pointer;
+    color: #08f;
+    font-size: 120%;
+}

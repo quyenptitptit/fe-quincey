@@ -1,0 +1,30 @@
+.cart-items-all {
+    background-color: white;
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-items-all p {
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(49, 48, 48);
+}
+
+input[type="checkbox"] {
+    padding: 0;
+    accent-color: black;
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.cart-item-list {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-height: 472px;
+    overflow-y: auto;
+}

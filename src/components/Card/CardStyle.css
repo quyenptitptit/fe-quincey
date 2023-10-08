@@ -1,0 +1,207 @@
+.c-category-shop {
+    position: relative;
+    height: max-content;
+    width: max-content;
+    margin: 10px 10px;
+    z-index: 1;
+}
+
+.c-category-shop img {
+    height: 360px;
+    width: 246px;
+}
+
+.c-category-shop-btn button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    height: 40px;
+    width: 150px;
+    font-size: 110%;
+    font-weight: 500;
+    padding: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: height 0.1s, width 0.1s, bottom 0.1s;
+}
+
+.c-category-shop-btn button:hover {
+    height: 45px;
+    width: 155px;
+    bottom: 28px;
+}
+
+.c-category-name {
+    display: flex;
+    height: 95px;
+    width: 260px;
+    margin: 10px 2px;
+    background-color: var(--footer-color);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.c-category-name:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.c-category-name img {
+    height: 100%;
+    width: 50%;
+    border-top-left-radius: 15px;
+    border-end-start-radius: 15px;
+}
+
+.c-category-name p {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.c-sale {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 210px;
+    margin: 10px 5px;
+}
+
+.c-sale-percent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 63px;
+    width: 54px;
+    background-color: #FFC436;
+    font-size: 110%;
+    z-index: 2;
+}
+
+.c-sale-percent p {
+    font-weight: 500;
+}
+
+.c-sale >img, .c-item >img {
+    height: 278px;
+    width: 100%;
+}
+
+.c-sale-price {
+    display: flex;
+    align-items: center;
+}
+
+.c-sale-price-cost, .c-item-cost {
+    font-size: 120%;
+    color: var(--price-color);
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.c-sale-price-sale {
+    color: #9E9FA5;
+}
+
+del {
+    color: #9E9FA5;
+}
+
+.c-item {
+    position: relative;
+    /* z-index: 1; */
+    height: max-content;
+    width: 210px;
+    /* margin: 10px; */
+    margin: 10px 5px;
+    background-color: white;
+}
+
+.c-item-img {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.c-item-img>button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 30px;
+    z-index: 2;
+    background-color: white;
+    height: 30px;
+    width: max-content;
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.c-item-img:hover >button {
+    display: flex;
+}
+
+.c-item-img:hover >div {
+    display: flex;
+}
+
+.c-item-img-btn {
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+}
+
+.c-item-img-btn button {
+    padding: 3px 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    font-size: 120%;
+}
+
+.c-item-infor {
+    padding: 10px;
+}
+
+.c-item-des {
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.c-item-tag {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 80%;
+}
+
+.c-item-tag p {
+    padding: 2px 5px;
+    color: red;
+    border: 1px solid red;
+    /* background-color: #FFC436; */
+    margin-right: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 5px 5px 5px 0;
+}

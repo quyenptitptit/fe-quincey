@@ -1,0 +1,39 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    padding: 20px 30px;
+}
+
+.profile-header {
+    height: 70px;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-information {
+    width: 70%;
+}
+
+.profile-avt {
+    align-items: center;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.image-avt {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-radio {
+    margin-left: 100px;
+}

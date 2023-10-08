@@ -1,0 +1,131 @@
+.product-add-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.product-add-form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: max-content;
+    padding: 10px;
+}
+
+.product-add-img {
+    position: relative;
+    display: flex;
+    margin: 15px;
+}
+
+input[type="file"]::file-selector-button {
+    border: 1px solid black;
+    padding: 0.4em 0.4em;
+    border-radius: 0.2em;
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.product-input-img {
+    border: 1px solid rgb(198, 196, 196);
+    padding: 0.4em 0.6em;
+    border-radius: 0.2em;
+    width: 250px;
+    background-color: white;
+    color: black;
+    margin-right: 144.5px;
+    outline: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#addImg {
+    position: absolute;
+    top: 0px;
+    right: 80px;
+    padding: 0.4em 0.4em;
+    width: 150px;
+    background-color: white;
+    border-color: black;
+    cursor: pointer;
+}
+
+#addImg:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-redo {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    padding: 0.4em 0.6em;
+    background-color: white;
+    cursor: pointer;
+}
+
+.p-option {
+    text-transform: capitalize;
+}
+
+.product-add-form-select {
+    width: 50%;
+    padding: 10px;
+}
+
+.p-add-form-img {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 110px;
+    height: max-content;
+}
+
+.p-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.p-image-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+.p-image-close .fas {
+    height: 20px;
+    width: 20px;
+    z-index: 2;
+    padding: 0;
+}
+
+.p-image-close:hover {
+    color: rgb(51, 48, 48);
+}
+
+/* input[type="file"]::file-selector-button:hover {
+    background-color: white;
+    color: black;
+} */
+
+.p-add-btn {
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 15px;
+}

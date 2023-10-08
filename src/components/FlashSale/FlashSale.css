@@ -1,0 +1,36 @@
+.sale {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 100px;
+}
+
+.sale-title {
+    font-size: 200%;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.sale-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    /* justify-content: space-between; */
+}
+
+.sale-more {
+    font-size: 30px;
+    color: var(--grey-color);
+    cursor: pointer;
+    height: max-content;
+    width: max-content;
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: var(--main-color);
+}
+
+.sale-more:hover {
+    color: var(--black-color);
+}

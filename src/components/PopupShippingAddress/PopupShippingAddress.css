@@ -1,0 +1,50 @@
+.popup-shipping {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-shipping {
+    background-color: white;
+    padding: 24px;
+    height: 410px;
+    width: 600px;
+    position: relative;
+}
+
+.popup-shipping-close {
+    position: absolute;
+    top: 15px;
+    right: 24px;
+    cursor: pointer;
+}
+
+
+
+.popup-shipping-body {
+    overflow: auto;
+    height: 310px;
+}
+
+.popup-shipping-border {
+    cursor: pointer;
+}
+
+.popup-shipping-border:hover {
+    border: 1px solid black;
+}
+
+.popup-shipping-btn {
+    border: none;
+    background-color: inherit;
+    font-size: 15px;
+    color: #2d68a8;
+    cursor: pointer;
+}
