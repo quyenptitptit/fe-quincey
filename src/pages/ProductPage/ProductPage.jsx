@@ -127,7 +127,7 @@ function ProductPage() {
                       className="p-category"
                       name="type"
                       value={tr.value}
-                      checked={type ? true : false}
+                      // checked={type ? true : false}
                       onChange={(e) => setType(e.target.value)}
                     />
                     {tr.label}
@@ -151,7 +151,7 @@ function ProductPage() {
                     className="p-category"
                     name="category"
                     value={tr.value}
-                    checked={category ? true : false}
+                    // checked={category ? true : false}
                     onChange={(e) => setCategory(e.target.value)}
                   />
                   {tr.label}
@@ -172,7 +172,7 @@ function ProductPage() {
                     className="p-category"
                     name="trademark"
                     value={tr.value}
-                    checked={trademark ? true : false}
+                    // checked={trademark ? true : false}
                     onChange={(e) => setTrademark(e.target.value)}
                   />
                   {tr.label}

@@ -159,7 +159,7 @@ function PaymentPage() {
               />
               Payment via international card
             </label>
-            <label>
+            {/* <label>
               <input
                 type="radio"
                 value="CASH"
@@ -168,7 +168,7 @@ function PaymentPage() {
                 onChange={(e) => handleChange(e.target.value)}
               />
               Payment in cash
-            </label>
+            </label> */}
           </form>
         </div>
       </div>
