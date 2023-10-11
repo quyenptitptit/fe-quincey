@@ -119,10 +119,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 101;
 }
 
 .popup-send-email {
     background-color: white;
     padding: 20px 20px 40px 20px;
     min-width: 700px;
+}
+
+.popup-enter-email {
+    background-color: white;
+    padding: 20px;
+    height: 300px;
+    min-width: 500px;
+}
+
+.popup-reset-password {
+    z-index: 102;
+}
+
+.popup-input {
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.p-popup-input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

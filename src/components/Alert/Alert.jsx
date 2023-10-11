@@ -1,28 +1,43 @@
 import React from "react";
 import "./Alert.css";
 import { Link } from "react-router-dom";
-import {alertState} from '../../recoil/AlertState'
+import { alertState } from "../../recoil/AlertState";
 import { useRecoilState } from "recoil";
 
 function Alert(props) {
-//   const { setIsAlert } = props;
-  const [isAlert, setIsAlert] = useRecoilState(alertState)
+  //   const { setIsAlert } = props;
+  const [isAlert, setIsAlert] = useRecoilState(alertState);
   return (
-    <div className="alert" style={isAlert ? {display: "flex"} : {display: "none"}}>
-      <div className="alert-container">
-        <div className="alert-text">
-          <i
-            class="fas fa-exclamation-circle"
-            style={{ color: "#094e9d", fontSize: "150%" }}
-          ></i>
-          <p className="alert-txt">Please log in to continue!</p>
+    <div
+      className="pop-up"
+      style={isAlert ? { display: "flex" } : { display: "none" }}
+    >
+      <div className="p-pop-up">
+        <div class="popup-main">
+          <div class="popup-content">
+            <i
+              class="fas fa-exclamation-triangle"
+              style={{ color: "#094e9d", fontSize: "150%" }}
+            ></i>
+            <p className="alert-text">Log in to continue?</p>
+          </div>
         </div>
-        <div className="alert-button">
-          <button className="alert-btn" onClick={() => setIsAlert(false)}>
+        <div class="popup-footer">
+          <button
+            class="btn btn-cancel"
+            id="btnCancelPopup"
+            style={{ marginRight: "16px" }}
+            onClick={() => setIsAlert(false)}
+          >
             Cancel
           </button>
-          <Link to="/login">
-            <button className="alert-btn alert-btn-primary" onClick={() => setIsAlert(false)}>Login</button>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <button
+              class="btn alert-btn-primary"
+              onClick={() => setIsAlert(false)}
+            >
+              Log in
+            </button>
           </Link>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import "../Header/Header.css";
 import { TYPE } from "../../datas/DATA";
@@ -11,12 +11,14 @@ import orderService from "../../services/OrderService";
 
 function Navbar(props) {
   const { selected, setSelected } = props;
+  const navigate = useNavigate()
   const cart = useRecoilValue(cartState);
   const userLogin = useRecoilValue(userState);
   const setType = useSetRecoilState(toastType);
   const setTxt = useSetRecoilState(toastTxt);
   const setState = useSetRecoilState(toastState);
-  const [order, setOrder] = useState([]);
+  // const [order, setOrder] = useState([]);
+  const [pending, setPending] = useState(0)
 
   const settingToastMess = (type, txt) => {
     setState(true);
@@ -28,17 +30,21 @@ function Navbar(props) {
     return cart?.reduce((sum, { quantity }) => sum + quantity, 0);
   };
 
-  const getPendingTotal = () => {
-    return order?.reduce((sum, { status }) => {
-      if (status == "00") {
-        return sum + 1;
-      } else return sum;
-    }, 0);
-  };
+  // const getPendingTotal = () => {
+  //   return order?.reduce((sum, { status }) => {
+  //     if (status == "00") {
+  //       return sum + 1;
+  //     } else return sum;
+  //   }, 0);
+  // };
 
   const getOrders = async () => {
     const res = await orderService.getOrders();
-    setOrder(res.data);
+    setPending(res?.data.reduce((sum, { status }) => {
+      if (status == "00") {
+        return sum + 1;
+      } else return sum;
+    }, 0));
   };
 
   useEffect(() => {
@@ -125,19 +131,19 @@ function Navbar(props) {
               }}
             >
               <i class="fas fa-shopping-bag"></i>
-              <p className="length-cart">{getPendingTotal()}</p>
+              <p className="length-cart">{pending}</p>
             </button>
           </Link>
         ) : (
           <>
-            <button
+            {/* <button
               className={
                 selected == "search" ? "btn-icon btn-icon-focus" : "btn-icon"
               }
               onClick={() => setSelected("search")}
             >
               <i class="far fa-search"></i>
-            </button>
+            </button> */}
             <button
               className={
                 selected == "favorite" ? "btn-icon btn-icon-focus" : "btn-icon"
@@ -150,7 +156,7 @@ function Navbar(props) {
             >
               <i class="far fa-heart"></i>
             </button>
-            <Link to="/shopping-cart">
+            <Link to={userLogin ? "/shopping-cart" : "/login"} >
               <button
                 className={
                   selected == "shopping-cart"

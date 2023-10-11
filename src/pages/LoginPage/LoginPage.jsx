@@ -11,19 +11,24 @@ import { cartState } from "../../recoil/CartState";
 import { loadingState } from "../../recoil/LoadingState";
 import { validateRegister, validateLogin } from "../../utils/validateForm";
 import PopupSendEmail from "../../components/Popup/PopupSendEmail";
+import PopupEnterEmail from "../../components/Popup/PopupEnterEmail";
+import PopupResetPass from "../../components/Popup/PopupResetPass";
 
 function LoginPage(props) {
   const [isLogin, setIsLogin] = useState(props.isLogin);
   const [isPopup, setIsPopup] = useState(false);
   const [otp, setOtp] = useState();
   const location = useLocation().pathname.split("/");
-  const setUserLogin = useSetRecoilState(userState);
   const [user, setUser] = useState({});
+  const [isEnterEmail, setIsEnterEmail] = useState(false);
+  const [isResetPass, setIsResetPass] = useState(false);
+  const setUserLogin = useSetRecoilState(userState);
   const setType = useSetRecoilState(toastType);
   const setTxt = useSetRecoilState(toastTxt);
   const setState = useSetRecoilState(toastState);
   const setLoading = useSetRecoilState(loadingState);
   const setCart = useSetRecoilState(cartState);
+  const [email, setEmail] = useState()
 
   const naviagte = useNavigate();
 
@@ -57,10 +62,10 @@ function LoginPage(props) {
     }
   };
 
-  const handleSendEmail = async () => {
+  const handleSendEmail = async (mail) => {
     setLoading(true);
     const email = {
-      email: user?.email,
+      email: mail,
     };
     const res = await userService.sendEmail(email);
     console.log(res.data);
@@ -79,7 +84,7 @@ function LoginPage(props) {
     if (error) {
       settingToastMess("warning", error);
     } else {
-      handleSendEmail();
+      handleSendEmail(user?.email);
       setIsPopup(true);
     }
   };
@@ -125,12 +130,25 @@ function LoginPage(props) {
     <div className="login">
       {isPopup && (
         <PopupSendEmail
-          handleRegister={handleRegister}
+          handleClick={handleRegister}
           otp={otp}
+          setOtp={setOtp}
           userLogin={user}
           setIsPopup={setIsPopup}
+          isEnterEmail={isEnterEmail}
+          setIsResetPass={setIsResetPass}
         />
       )}
+      {isEnterEmail && (
+        <PopupEnterEmail
+          setIsPopup={setIsPopup}
+          onClick={handleSendEmail}
+          setIsEnterEmail={setIsEnterEmail}
+          email={email}
+          setEmail={setEmail}
+        />
+      )}
+      {isResetPass && <PopupResetPass email={email} setIsResetPass={setIsResetPass} setIsEnterEmail={setIsEnterEmail} />}
       <p className="login-qu">
         {isLogin
           ? "Do not have an account? "
@@ -177,9 +195,16 @@ function LoginPage(props) {
             onChange={(e) => handleChange("password", e.target.value)}
           />
           <div className="login-forgot">
-            <Link to="" style={{ color: "#4F709C" }}>
+            <p
+              onClick={() => setIsEnterEmail(true)}
+              style={{
+                color: "#4F709C",
+                textDecoration: "underline",
+                cursor: "pointer",
+              }}
+            >
               Forgot password?
-            </Link>
+            </p>
           </div>
           <Button name="Login" onClick={(e) => handleLogin(e)} />
         </div>

@@ -18,6 +18,9 @@ const userService = {
     },
     sendEmail: (email) => {
         return axiosConfig.post('/mail', email)
+    },
+    checkEmail: (email) => {
+        return axiosConfig.post("/checkMail", email)
     }
 }
 

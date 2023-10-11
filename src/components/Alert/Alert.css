@@ -1,32 +1,6 @@
-.alert {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-}
-
-.alert-container {
-    width: 320px;
-    height: 100px;
-    background-color: white;
-    padding: 20px;
-}
-
 .alert-text {
-    display: flex;
-    align-items: center;
     font-size: 120%;
-    margin-bottom: 10px;
-}
-
-.alert-txt {
-    margin-left: 10px;
+    font-weight: 500;
 }
 
 .alert-button {

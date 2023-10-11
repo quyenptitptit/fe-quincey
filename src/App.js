@@ -19,9 +19,7 @@ import Pending from "./pages/Pending/Pending";
 import HistoryOrder from "./pages/HistoryOrder/HistoryOrder";
 
 function App() {
-  if(!localStorage.getItem('cart')) {
-    localStorage.setItem('cart', JSON.stringify([]))
-  }
+  
   return (
     <Routes>
       <Route path="/" exact element={<Layout />}>

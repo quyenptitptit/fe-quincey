@@ -1,21 +1,30 @@
 import React, { useState, useEffect } from "react";
 import "./MyOrders.css";
 import orderService from "../../services/OrderService";
+import userService from "../../services/UserService";
 import OrderItem from "../OrderItem/OrderItem";
 import { loadingState } from "../../recoil/LoadingState";
-import { useSetRecoilState } from "recoil";
+import { useSetRecoilState, useRecoilValue } from "recoil";
+import { userState } from "../../recoil/UserState";
 
 function MyOrders(props) {
   const { admin, history } = props;
   const [isClickPopup, setIsClickPopup] = useState(false);
   const [orders, setOrders] = useState([]);
   const setLoading = useSetRecoilState(loadingState);
+  const user = useRecoilValue(userState);
 
   const getOrders = async () => {
     setLoading(true);
-    const res = await orderService.getOrders();
-    console.log(res.data.reverse());
-    setOrders(res.data);
+    if (admin) {
+      const res = await orderService.getOrders();
+      setOrders(res?.data?.reverse());
+      // console.log(res.data)
+    } else {
+      const res = await orderService.getOrderByCustomer(user?._id);
+      // console.log(res?.data);
+      setOrders(res?.data?.reverse());
+    }
     setLoading(false);
   };
 

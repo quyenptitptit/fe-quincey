@@ -29,7 +29,7 @@ function Header(props) {
   const handleClickLogout = async () => {
     setLoading(true)
     setIsClick(false)
-    await userService.updateUser(userLogin?._id, {...userLogin, ['carts']: cart})
+    await userService.updateUser(userLogin?._id, {carts: cart})
     setUserLogin()
     setCart()
     localStorage.removeItem("user")

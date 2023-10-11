@@ -3,7 +3,15 @@ import { toastState, toastTxt, toastType } from "../../recoil/ToastMessState";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 
 function PopupSendEmail(props) {
-  const { setIsPopup, userLogin, otp, handleRegister } = props;
+  const {
+    setIsPopup,
+    userLogin,
+    otp,
+    setOtp,
+    handleClick,
+    isEnterEmail,
+    setIsResetPass,
+  } = props;
   const [inputOtp, setInputOtp] = useState();
   const setStatus = useSetRecoilState(toastState);
   const setTxt = useSetRecoilState(toastTxt);
@@ -16,16 +24,23 @@ function PopupSendEmail(props) {
   };
 
   const handleSendOtp = () => {
-    if (otp !== inputOtp) {
+    if (otp != inputOtp) {
       settingToastMess("error", "otp code is incorrect");
     } else {
-      handleRegister();
-      setInputOtp(false);
+      if (isEnterEmail) {
+        setIsPopup(false);
+        setIsResetPass(true)
+      } else {
+        handleClick();
+        setInputOtp(false);
+        setOtp();
+      }
     }
   };
 
   const handleBack = () => {
     setIsPopup(false);
+    setOtp();
   };
 
   return (
